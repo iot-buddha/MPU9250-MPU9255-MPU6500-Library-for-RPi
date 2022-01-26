@@ -1,2 +1,2 @@
-all: MPU9255_Main.cpp MPU9255.cpp
-	g++ -o app MPU9255_Main.cpp MPU9255.cpp -I . -lwiringPi
+all: MPU9255_Main.cpp MPU9255.cpp tb_core.cpp
+	g++ -o app MPU9255_Main.cpp MPU9255.cpp tb_core.cpp -I . -lwiringPi
