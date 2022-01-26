@@ -4,9 +4,13 @@
 using namespace std;
 
 int main(void) {
+	cout<<"Starting to Initialize"<<endl;
 	Mpu.initialize();
+
+	cout<<"Setting alpha value"<<endl;
 	Mpu.setAlpha(0.98);  // Default is 0.96
 	
+	cout<<"Setting alpha value"<<endl;
 	Mpu.initDT();  // Place this before entering loop
 	while (1) {
 		cout<< "Running Loop"<<endl;
