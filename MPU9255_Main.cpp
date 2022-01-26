@@ -18,6 +18,7 @@ int main(void) {
 		float gyr_measurement[6] = {0.0};
 		float filtered_angles[3] = {0.0};
 		double timedifference = 0;
+		long unsigned int timenow_us = 0;
 
 		Mpu.getResult(acc_measurement,6,gyr_measurement,6,filtered_angles,3);
 
@@ -41,9 +42,10 @@ int main(void) {
 		cout<<"Filtered angle y:"<<filtered_angles[1]<<endl;
 		cout<<"Filtered angle z:"<<filtered_angles[2]<<endl;
 
-		Mpu.calcDT(timedifference);  // MUST place this at the end of loop
+		Mpu.calcDT(timedifference,timenow_us);  // MUST place this at the end of loop
 
-		cout<<"Time diff"<<timedifference<<endl;
+		cout<<"Time diff in sec"<<timedifference<<endl;
+		cout<<"Time now in usec"<<timenow_us<<endl;
 	}
 	cout<< "Exiting the loop"<<endl;
 	return 0;
