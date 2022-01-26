@@ -287,7 +287,7 @@ private:
 public:
 	uint8_t initialize(uint8_t address = I2C_ADDRESS); // Initializes motion sensor. You must call this before using any other methods.
 	void initDT(void);								   // Call this just before entering loop
-	void calcDT(double& timediff, long unsigned int& timenow);								   // Call this just before the end of loop
+	void calcDT(double& timediff);								   // Call this just before the end of loop
 	void getResult(void);							   // Call this to get result(float angles[2]) updated.
 	void getResult(float *acc_buffer,
 				   size_t acc_buffer_len,
