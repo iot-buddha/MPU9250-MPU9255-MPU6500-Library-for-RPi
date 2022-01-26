@@ -181,11 +181,12 @@ void MPU9255::initDT()
 	cout << "initDt: " << t_prev << endl;
 }
 
-void MPU9255::calcDT()
+void MPU9255::calcDT(double& timediff)
 {
 	gettimeofday(&systime, NULL);
 	t_now = systime.tv_usec;
 	dt = t_now - t_prev;
+	timediff = dt/1000000;
 	if (t_prev > t_now)
 	{
 		dt += 1000000;
