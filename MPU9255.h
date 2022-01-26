@@ -280,8 +280,8 @@ private:
 	void setEnabled(const uint8_t enable);
 	void calibAccelGyro(void);
 	void getMeasurement(void);
-	void calcAccelYPR(void);
-	void calcGyroYPR(void);
+	void calcAccelYPR(float &raw_x, float &raw_y, float &raw_z, float &angle_x, float &angle_y, float &angle_z);
+	void calcGyroYPR(float &raw_x, float &raw_y, float &raw_z, float &angle_x, float &angle_y, float &angle_z);
 	void calcFilteredYPR(void);
 
 public:
