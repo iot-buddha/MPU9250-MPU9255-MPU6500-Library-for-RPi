@@ -38,7 +38,7 @@ int main(void) {
 
 		Mpu.calcDT();  // MUST place this at the end of loop
 	}
-	couu<< "Exiting the loop"<<endl;
+	cout<< "Exiting the loop"<<endl;
 	return 0;
 }
 
