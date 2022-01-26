@@ -187,7 +187,7 @@ void MPU9255::calcDT(double& timediff, long unsigned int& timenow)
 	t_now = systime.tv_usec;
 	dt = t_now - t_prev;
 	timediff = dt/1000000;
-	timenow = t_now;
+	timenow = systime.tv_usec;
 
 	if (t_prev > t_now)
 	{
