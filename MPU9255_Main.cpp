@@ -9,6 +9,7 @@ int main(void) {
 	
 	Mpu.initDT();  // Place this before entering loop
 	while (1) {
+		cout<< "Running Loop"<<endl;
 		float acc_measurement[6] = {0.0};
 		float gyr_measurement[6] = {0.0};
 		float filtered_angles[3] = {0.0};
