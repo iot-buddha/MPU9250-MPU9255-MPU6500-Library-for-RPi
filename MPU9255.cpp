@@ -8,6 +8,7 @@
 
 using namespace std;
 
+
 #include "MPU9255.h"
 
 uint8_t MPU9255::initialize(uint8_t address)
